@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>simple calculator</title>
+<script>
+function add()
+{
+var a=parseInt(document.getElementById("req1").value);
+var b=parseInt(document.getElementById("req2").value);
+var c = a+b;
+document.getElementById("req3").value=c;
+}
+function sub()
+{
+var a=document.getElementById("req1").value;
+var b=document.getElementById("req2").value;
+var c = a-b;
+document.getElementById("req3").value=c;
+}
+function mul()
+{
+var a=document.getElementById("req1").value;
+var b=document.getElementById("req2").value;
+var c = a*b;
+document.getElementById("req3").value=c;
+}
+function div()
+{
+var a=document.getElementById("req1").value;
+var b=document.getElementById("req2").value;
+var e = "MATH ERROR";
+if(b==0){
+    document.getElementById("req3").value=e;
+    return;
+}
+var c = a/b;
+document.getElementById("req3").value=c;
+}
+</script>
+<body>
+<h1 style="font-style:italic;">SIMPLE CALCULATOR</h1>
+<p>
+<form>
+INPUT 1<input type="text" id="req1" style="font-size:18pt;height:40px;width:250px;">
+INPUT 2<input type="text" id="req2" style="font-size:18pt;height:40px;width:250px;">
+OUTPUT<input type="text" id="req3" style="font-size:18pt;height:40px;width:250px;"><br> <br>
+<input type="button" onclick="add()" value="+" style="width:50px;height:50px;margin-right:16px;">
+<input type="button" onclick="sub()" value="-" style="width:50px;height:50px;margin-right:16px;">
+<input type="button" onclick="mul()" value="*" style="width:50px;height:50px;margin-right:16px;">
+<input type="button" onclick="div()" value="/" style="width:50px;height:50px;margin-right:16px;">
+</p>
+</form>
+</body>
+</html>
+
+
